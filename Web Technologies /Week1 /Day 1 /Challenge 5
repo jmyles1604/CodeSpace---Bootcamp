@@ -1,0 +1,24 @@
+<?php
+
+$edinburghClimate = [
+    "hottest" => [
+        "months" => ["July", "August"],
+        "averagelow" => 11.0,
+        "averagehigh" => 19.0,
+    ],
+    "coldest" => [
+        "months" => ["January", "February"],
+        "averagelow" => 1.0,
+        "averagehigh" => 7.0,
+    ]
+];
+
+echo "Hottest months: " . implode(", ", $edinburghClimate["hottest"]["months"]) . "<br>";
+echo "Average low: " . $edinburghClimate["hottest"]["averagelow"] . "°C<br>";
+echo "Average high: " . $edinburghClimate["hottest"]["averagehigh"] . "°C<br><br>";
+
+echo "Coldest months: " . implode(", ", $edinburghClimate["coldest"]["months"]) . "<br>";
+echo "Average low: " . $edinburghClimate["coldest"]["averagelow"] . "°C<br>";
+echo "Average high: " . $edinburghClimate["coldest"]["averagehigh"] . "°C";
+
+?>
