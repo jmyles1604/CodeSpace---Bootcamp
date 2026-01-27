@@ -1,0 +1,13 @@
+<?php
+
+$dayOfTheWeek = array ( "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" );
+
+echo "<ul>";
+
+foreach ($dayOfTheWeek as $day) {
+    echo "<li>$day</li>";
+}
+
+echo "</ul>";
+
+?>
