@@ -1,0 +1,9 @@
+//function isEven(num) {
+    //return num % 2 === 0;
+//}
+
+// Arrow function version
+
+let isEven = num => num % 2 === 0;
+
+console.log (isEven(4));
