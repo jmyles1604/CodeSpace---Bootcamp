@@ -1,0 +1,13 @@
+<?php
+
+function replaceVowelsWithX($str) {
+    $vowels = array('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U');
+    $replacement = 'x';
+    return str_replace($vowels, 'x', $str);
+}
+
+$input = "Hello World!";
+$output = replaceVowelsWithX($input);
+echo $output;  // Output: Hxllx Wxrld!
+
+?>
