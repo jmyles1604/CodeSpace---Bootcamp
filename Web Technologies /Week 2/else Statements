@@ -1,0 +1,47 @@
+<doctype html>
+<html>
+
+<head>
+    <title>Age Group Checker</title>
+</head>
+
+<body>
+<h1>Age Group Checker</h1>
+
+<form method="post">
+    <label for="age"><strong>Enter your age:</strong></label>
+    <input type="number" name="age" required>
+    <button type="submit">Check Age Group</button>
+</form>
+
+</body>
+</html>
+
+
+<?php
+
+if (isset($_POST['age'])) {
+
+$age = $_POST['age'];
+
+$results = "";
+
+if ($age <13) {
+    $results = "You are a child!";
+}
+elseif ($age >= 13 && $age <18) {
+    $results = "You are a teenager!";
+} 
+elseif ($age >= 18 && $age < 64 ) {
+    $results = "You are an adult!";
+}   
+else {
+    $results = "You are a senior citizen!";
+}
+}
+
+
+if (isset($results)) {
+    echo "<p>$results</p>";
+}
+?>
