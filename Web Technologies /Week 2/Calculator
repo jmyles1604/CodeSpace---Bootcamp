@@ -1,0 +1,57 @@
+<?php
+// Only run the calculation after the form is submitted
+if (isset($_POST["submit"])) {
+
+    $num1 = $_POST["num1"];
+    $num2 = $_POST["num2"];
+    $operator = $_POST["operator"];
+    $result = "";
+
+    if ($operator == "+") {
+        $result = $num1 + $num2;
+    } elseif ($operator == "-") {
+        $result = $num1 - $num2;
+    } elseif ($operator == "*") {
+        $result = $num1 * $num2;
+    } elseif ($operator == "/") {
+        $result = $num1 / $num2;
+    }
+}
+?>
+
+<!doctype html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+
+<h1>Calculator</h1>
+
+<form method="post">
+    <input type="number" name="num1" required>
+    
+    <select name="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+
+    <input type="number" name="num2" required>
+
+    <button type="submit" name="submit">Calculate</button>
+</form>
+
+<?php
+
+
+
+if (isset($result)) {
+    echo $num1,$operator,$num2; //See the operation
+    echo "<p>The result is: <strong>$result</strong></p>";
+}
+?>
+
+</body>
+</html>
