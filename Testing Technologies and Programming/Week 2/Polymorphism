@@ -1,0 +1,39 @@
+class user { // Base class representing a user
+    constructor () {
+        this.numberOfArticles = 0;
+    }
+
+    setNumberOfArticles(numberOfArticles) { // Method to set the number of articles for the user
+        this.numberOfArticles = numberOfArticles;
+    }
+
+    getNumberOfArticles(numberOfArticles) { // Method to get the number of articles for the user
+        return this.numberOfArticles;
+    }
+
+    calcScore() { // Method to calculate the score for the user, can be overridden by derived classes
+        return this.numberOfArticles;
+    }
+}
+
+class author extends user { // Derived class representing an author, inherits from user
+
+    calcScore() {
+        return this.numberOfArticles * 10 + 20; // 10 points per article + 20 bonus points
+    }
+}
+
+class editor extends user { // Derived class representing an editor, inherits from user
+
+    calcScore() {
+        return this.numberOfArticles * 6 + 15;  // 6 points per article + 15 bonus points
+        }
+}
+
+const authoruser = new author();
+authoruser.setNumberOfArticles(8); // 8 articles written
+console.log("author score:", authoruser.calcScore()); // Output: author score: 100
+
+const editoruser = new editor();
+editoruser.setNumberOfArticles(15); // 15 articles edited
+console.log("editor score:", editoruser.calcScore()); // Output: editor score: 105
