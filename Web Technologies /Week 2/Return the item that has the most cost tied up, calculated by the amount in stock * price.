@@ -1,0 +1,26 @@
+type Product = { item: string; price: number; stock: number }; // Define a type for the product objects
+
+const mostExpensiveItem = function (items: Product[]) { // Function to find the most expensive item based on price * stock
+  let mostExpensive = items[0]; // Initialize the most expensive item as the first item in the array
+  let highestValue = items[0].price * items[0].stock; // Calculate the value of the first item (price * stock) to compare with others
+
+  for (let i = 1; i < items.length; i++) { // Loop through the items starting from the second item
+    const currentValue = items[i].price * items[i].stock; // Calculate the value of the current item (price * stock)
+
+    if (currentValue > highestValue) { // If the current item's value is greater than the highest value found so far
+      highestValue = currentValue; // Update the highest value
+      mostExpensive = items[i]; // Update the most expensive item to the current item
+    }
+  }
+
+  return mostExpensive; // Return the most expensive item found
+};
+
+const products = [ // Array of product objects with item name, price, and stock
+  { item: "irn bru", price: 3.25, stock: 50 },
+  { item: "fanta", price: 3.98, stock: 45 },
+  { item: "diet coke", price: 4.40, stock: 38 },
+  { item: "7up", price: 3.99, stock: 42 },
+];
+
+console.log(mostExpensiveItem(products)); // This will log the most expensive item based on the price * stock calculation
