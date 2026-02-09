@@ -1,0 +1,7 @@
+function reverseString(str) {
+    return str.split("").reverse().join(""); // The split() method splits a string into an array of substrings, the reverse() method reverses an array in place, and the join() method joins all elements of an array into a string.
+};
+    
+
+console.log(reverseString("John")); // Output: "nhoJ"
+console.log(reverseString("James")); // Output: "semaJ"
