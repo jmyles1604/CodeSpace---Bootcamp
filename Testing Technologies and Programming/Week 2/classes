@@ -1,0 +1,17 @@
+class user { // Base class representing a user
+	constructor(firstName, lastName) { // Constructor to initialize the first name and last name for the user
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+	user() {
+		return `Hello, ${this.firstName} ${this.lastName}`; // Method to return a string with the user's first name and last name
+	}
+
+	user2() {
+		return `Hello, ${this.firstName} ${this.lastName}`; // Method to return a string with the user's first name and last name
+	}
+}
+
+console.log(new user("John", "Doe").user()); // Output: Hello, John Doe
+console.log(new user("Jane", "Doe").user2());// Output: Hello, Jane Doe
