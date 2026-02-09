@@ -1,0 +1,28 @@
+class user { // Base class representing a user
+    constructor (username) { // Constructor to initialize the username for the user
+        this.username = username;
+    }
+
+    get username() { // Getter method to retrieve the username of the user
+        return this._username;
+    }
+
+    set username(username) { // Setter method to set the username of the user
+        this._username = username;
+    }
+}
+
+class admin extends user { // Derived class representing an admin, inherits from user
+    expressYourRole() { 
+        return "Admin"; // Method to express the role of the admin user
+    }
+
+    sayHello() { // Method to say hello to the admin user
+        return "Hello admin, " + this.username; // Uses the username property inherited from the user class
+    }
+}
+
+    const adminUser = new admin("Balthazar"); // Create an instance of the admin class with username "Balthazar"
+    
+    console.log(adminUser.expressYourRole()); // Output: Admin
+    console.log(adminUser.sayHello()); // Output: Hello admin, Balthazar
