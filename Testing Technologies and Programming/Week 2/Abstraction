@@ -1,0 +1,43 @@
+class User { // Base class representing a user
+    constructor () { // Constructor to initialize the username for the user
+        if (this.constructor === User) {
+            throw new Error("Abstract class cannot be instantiated directly."); // Prevent instantiation of the user class directly
+        }
+
+        this.username = "";
+    }
+
+    set username(username) { // Setter method to set the username of the user
+        this._username = username;
+        }
+
+    get username() { // Getter method to retrieve the username of the user
+        return this._username;
+    }
+
+    stateYourRole() { // Abstract method to state the role of the user, must be implemented by derived classes
+        throw new Error("Method 'stateYourRole()' must be implemented.");
+    }
+
+}
+
+class Admin extends User { // Derived class representing an admin, inherits from user
+    stateYourRole() {
+        return "Admin";
+    }
+}
+
+class Viewer extends User { // Derived class representing a viewer, inherits from user
+    stateYourRole() {
+    return "Viewer";
+}
+
+}
+
+const adminUser = new Admin(); // Create an instance of the admin class
+adminUser.username = "Balthazar"; // Set the username for the admin user
+console.log(adminUser.stateYourRole()); // Output: Admin
+
+const viewerUser = new Viewer(); // Create an instance of the viewer class
+viewerUser.username = "Melchior"; // Set the username for the viewer user
+console.log(viewerUser.stateYourRole()); // Output: Viewer
