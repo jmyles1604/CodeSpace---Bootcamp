@@ -1,0 +1,37 @@
+class user { // Base class representing a user
+	constructor (firstName, lastName) { // Constructor to initialize the first name and last name for the user
+        this._firstName = firstName;
+        this._lastName = lastName;
+	}
+
+    get firstName() { // Getter method to retrieve the first name of the user
+        return this._firstName;
+    }
+
+    get lastName() { // Getter method to retrieve the last name of the user
+        return this._lastName;
+    }
+
+    set firstName(firstName) { // Setter method to set the first name of the user
+        this._firstName = firstName;
+    }
+
+    set lastName(lastName) { // Setter method to set the last name of the user
+        this._lastName = lastName;
+    }
+
+    hello() {
+        return "hello world"; // Method to return a greeting message
+    }
+
+    user () {
+        return `My name is firstName lastName`; // Method to return a string with the user's first name and last name
+    }
+
+}
+
+    const user1 = new user(); // Create an instance of the user class
+    console.log(user1.hello()); // Output: hello world
+    console.log(user1.user()); // Output: My name is firstName lastName
+
+
