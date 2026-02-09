@@ -1,0 +1,7 @@
+function reverseArray(arr) { 
+    return arr.reverse(); // The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
+}
+
+
+console.log(reverseArray([1,2,3,4,5])); // Output: [5, 4, 3, 2, 1]
+console.log(reverseArray(["i", "like", "JavaScript"])); // Output: ["JavaScript", "like", "i"]
