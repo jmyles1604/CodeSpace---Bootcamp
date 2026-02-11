@@ -1,0 +1,25 @@
+What is Software Testing?
+
+Software testing is checking that a program or application works properly before it is released.
+It helps find bugs and problems so they can be fixed early.The main aim is to make sure the software does what 
+it’s supposed to do and doesn’t break for users.
+
+Functional Testing
+Functional testing checks that the software works as expected.It focuses on what the system does and whether 
+the features behave correctly.
+
+Examples include:
+
+Checking that a user can log in with the correct username and password.
+Making sure a shopping cart adds up the total price correctly.
+Testing that a form submits properly when all fields are filled in.
+
+Non-Functional Testing
+Non-functional testing checks how well the system works rather than what it does.It looks at things like 
+performance, speed, security, and usability.
+
+Examples include:
+
+Testing how the system performs when lots of users are on it at the same time.
+Checking that user data is secure.
+Making sure the website works on different browsers and devices.
