@@ -1,0 +1,12 @@
+describe('Cypress Test Page', () => {
+  it('Visits the example page', () => {
+    cy.visit('https://example.cypress.io/commands/actions') //Visit the URL
+    
+    cy.get('.action-email') //Get the element with class 'action-email'
+      .should('exist') //Assert that the element exists
+      .type('johnmyles1604@gmail.com') //Type the email into the input field
+      .get('.action-email') //Get the same element again
+      .should('have.value', 'johnmyles1604@gmail.com') //Assert that the value of the input field is correct
+
+  })
+})
