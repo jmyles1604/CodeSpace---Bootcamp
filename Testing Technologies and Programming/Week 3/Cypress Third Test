@@ -1,0 +1,13 @@
+describe('Cypress Test Page', () => {
+  it('Visits the example page', () => {
+    cy.visit('https://example.cypress.io/commands/actions') //Visit the URL
+
+    cy.get(".action-btn") //Get the button element
+      .click() //Click the button
+
+    cy.get("#action-canvas") //Get the canvas element
+      .click()
+      .click("topLeft") //Click the top left corner of the canvas
+      .click("bottomRight") //Click the bottom right corner of the canvas
+  })
+})
