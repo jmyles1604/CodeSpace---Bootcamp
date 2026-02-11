@@ -1,0 +1,11 @@
+describe('Cypress Test Page', () => {
+  it('Visits the example page', () => {
+    cy.visit('https://example.cypress.io') //Visit the URL
+
+    cy.get('h2').contains("Commands") //Find the h2 element that contains the text "Commands"
+
+    cy.get("h2").contains("Commands").click() //Click on the h2 element that contains the text "commands"
+
+    cy.get('.home-list').find('li').should("contain", "Window")
+  })
+})
