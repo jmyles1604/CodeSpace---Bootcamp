@@ -1,14 +1,14 @@
 class user { // Base class representing a user
     constructor () {
-        this.numberOfArticles = 0;
+        this._numberOfArticles = 0;
     }
 
     setNumberOfArticles(numberOfArticles) { // Method to set the number of articles for the user
-        this.numberOfArticles = numberOfArticles;
+        this._numberOfArticles = numberOfArticles;
     }
 
-    getNumberOfArticles(numberOfArticles) { // Method to get the number of articles for the user
-        return this.numberOfArticles;
+    getNumberOfArticles() { // Method to get the number of articles for the user
+        return this._numberOfArticles;
     }
 
     calcScore() { // Method to calculate the score for the user, can be overridden by derived classes
