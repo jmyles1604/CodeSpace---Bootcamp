@@ -1,0 +1,74 @@
+<?php
+
+include 'nav.php';
+require 'connect_db.php';
+
+
+//RUN QUERY
+$q = "SELECT * FROM products";
+$r = mysqli_query($link, $q);
+
+// Check query worked
+if (!$r) {
+  die("Query failed: " . mysqli_error($link));
+}
+
+?>
+
+<div class="container">
+  <div class="row">
+
+<?php
+
+//FETCH RESULTS (loop through rows)
+if (mysqli_num_rows($r) > 0) {
+
+  while ($row = mysqli_fetch_assoc($r)) {
+
+    echo '
+      <div class="col-md-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img src="' . $row['item_img'] . '" class="card-img-top">
+
+          <div class="card-body">
+            <h5 class="card-title text-center">' . $row['item_name'] . '</h5>
+            <p class="card-text">' . $row['item_desc'] . '</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-center">£' . $row['item_price'] . '</li>
+
+            <li class="list-group-item">
+              <a class="btn btn-dark w-100" href="update.php?id=' . $row['item_id'] . '">
+                Update
+              </a>
+            </li>
+
+            <li class="list-group-item">
+              <a class="btn btn-outline-dark w-100" href="delete.php?item_id=' . $row['item_id'] . '">
+                Delete Item
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>';
+  }
+
+} else {
+  echo "<p>No products found.</p>";
+}
+
+?>
+
+  </div>
+</div>
+
+<?php
+
+//CLOSE CONNECTION
+mysqli_close($link);
+
+include 'footer.php';
+
+?>
