@@ -1,0 +1,6 @@
+// Tests that the calculator page loads correctly
+describe('Calculator loads', () => {
+  it('should load the calculator page', () => {
+    cy.visit('/');
+  });
+});
