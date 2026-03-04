@@ -1,0 +1,24 @@
+{
+  "name": "calculator-project-team-1",
+  "version": "1.0.0",
+  "description": "Hi Team 1! \r <br/><br/>\r In this task you and your team are required to build a basic calculator app.\r <br/><br/>\r <img src=\"https://fvsch.com/articles/calculators/calculator-result.png\" alt=\"\" height=\"360\" role=\"presentation\" class=\"img-responsive atto_image_button_text-bottom\">\r <br/><br/>\r Is not essential that you use any framework to fulfil the task but, this could be a good exercise to practice your bootstrap skills, if you wish to.  \r <br/>\r You'll work as a team and each team member should work on a different operation (as a suggestion).\r <br/><br/>\r Ex: adding, subtracting, multiplying, dividing, etc.\r <br/><br/>\r For start, please add your name to this list:\r <br/><br/>\r Jorge, Logan, Simon, John.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EC-CodeSpace-0012/Calculator-Project-Team-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/EC-CodeSpace-0012/Calculator-Project-Team-1/issues"
+  },
+  "homepage": "https://github.com/EC-CodeSpace-0012/Calculator-Project-Team-1#readme",
+  "devDependencies": {
+    "cypress": "^15.10.0"
+  }
+}
