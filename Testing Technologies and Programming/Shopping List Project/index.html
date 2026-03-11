@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 class="header te text-center text-white py-3">ShopApp</h1>
+    </header>
+
+    <div class="container mt-4 p-4 bg-light rounded align-items-center">
+        <h2>Shopping List</h2>
+
+        <input 
+            type="text" 
+            id="item-input" 
+            placeholder="Add a new item..."  
+            class="form-control mb-3"
+        >
+
+        <button 
+            id="add-btn" 
+            class="btn btn-primary mb-3"
+        >
+            Add Item
+        </button>
+
+        <ul id="shopping-list" class="list-group">
+            <li id="empty-state" class="list-group-item text-center text-muted">
+                Your shopping list is empty.
+            </li>
+        </ul>
+    </div>
+
+    <div id="toast-container" class="position-fixed top-0 end-0 p-3"></div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="deleteModalLabel" class="modal-title">Delete Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this item?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button id="confirmDeleteBtn" type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer bg-light text-center p-3 mt-4">
+        <div id="item-counter">Total: 0 | Completed: 0</div>
+        <button id="clear-btn" class="btn btn-danger mt-2">Clear List</button>
+    </footer>
+
+    <!-- JS (Bootstrap FIRST, then your app) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
